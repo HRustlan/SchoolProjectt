@@ -1,0 +1,18 @@
+from flask import Flask, jsonify, render_template, request
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+@app.route('/verify-age', methods=['POST'])
+def verify_age():
+    age = request.json.get('age')
+    if age >= 18:
+        return jsonify({"status": "success", "message": "Возраст подтвержден"})
+    else:
+        return jsonify({"status": "error", "message": "Возраст не подтвержден"}), 400
+
+if __name__ == '__main__':
+    app.run(debug=True)
