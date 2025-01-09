@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scooter Rental</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="screen1">
+    <h1>Добро пожаловать в аренду самокатов!</h1>
+    <img src="photos/black_friday.jpg" alt="Promotion Image">
+    <button onclick="goToScreen2()">Арендовать самокат</button>
+  </div>
+
+  <div id="screen2" class="hidden">
+    <h1>Камера и Детекция Глаз</h1>
+    <video id="video" autoplay></video>
+    <button onclick="goToScreen3()">Подтвердить возраст</button>
+  </div>
+
+  <div id="screen3" class="hidden">
+    <h1>Подтвердите свой возраст</h1>
+    <button onclick="goToScreen4()">Продолжить</button>
+  </div>
+
+  <div id="screen4" class="hidden">
+    <h1>Отслеживание местоположения</h1>
+    <button onclick="exitApp()">Выход</button>
+    <div id="graph"></div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
