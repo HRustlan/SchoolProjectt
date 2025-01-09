@@ -1,0 +1,8 @@
+/project
+  /static
+    /photos
+    /styles.css
+    /scripts.js
+  /templates
+    /index.html
+  app.py
